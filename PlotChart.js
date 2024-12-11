@@ -1,14 +1,19 @@
 
+ipaddress="192.168.178.37"
+port="9990"
+
 i=0;
 count=10;
 itemCount = 50;
+
 const time = [];
 const temp = [];
 const humidity = [];
 const Batterie = [];
+
 function load(){ScreenWidth();show();};
 function ScreenWidth(){var ScreenWidth = window.screen.width+"px";var ScreenHeight = window.screen.height+"px";document.getElementsByTagName("html")[0].style.width = ScreenWidth;document.getElementsByTagName("html")[0].style.height = ScreenHeight;};
-function show(){const socket = new WebSocket('ws://192.168.178.37:9990');socket.addEventListener('open',function (event) {socket.send('Connection Established');});
+function show(){const socket = new WebSocket('ws://'+ipaddress+':'+port);socket.addEventListener('open',function (event) {socket.send('Connection Established');});
     socket.addEventListener('message',
     function (event) {
         val = event.data
@@ -20,8 +25,8 @@ function show(){const socket = new WebSocket('ws://192.168.178.37:9990');socket.
         item3 =  numArray[2];
         item4 =  numArray[3];
         item5 =  numArray[4];
-        
-        Batt1 = (item1/620)*12;vBatt1 = Batt1.toFixed(2);
+
+        Batt1 = (item1/620)*12;vBatt1 = Batt1.toFixed(2); 
         Batt2 = (item2/620)*12;vBatt2 = Batt2.toFixed(2);
         Batt3 = (item3/620)*12;vBatt3 = Batt3.toFixed(2);
 
