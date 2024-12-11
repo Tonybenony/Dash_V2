@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="Chart.js"></script>
+    <script src="PlotChart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body onload="load()">
+    <grid>
+        <div class="container">
+            <graph>
+                <canvas id="Temperature"></canvas>
+                <h3>Starter<br>Batterie</h3>
+                <value>---</value>
+            </graph>
+        </div>
+        <div class="container">
+            <graph>
+                <canvas id="Humidity"></canvas>
+                <h3>Verbrauchs<br>Batterie</h3>
+                <value>---</value>
+            </graph>
+        </div>
+        <div class="container">
+            <graph>
+                <canvas id="Batterie"></canvas>
+                <h3>Batterie</h3>
+                <value>---</value>
+            </graph>
+        </div>
+        <div class="container linegraph">
+            <canvas height="100px" id="myChart"></canvas>
+        </div>
+    </grid>
+</body>
+</html>
+<script>
+
+</script>
