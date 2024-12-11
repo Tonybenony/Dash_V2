@@ -5,7 +5,7 @@ port="9990"
 i=0;
 
 itemCount = 50;
-watingTime= 30;
+watingTime= 100;
 
 var time = [];
 
@@ -86,9 +86,9 @@ function show(){const socket = new WebSocket('ws://'+ipaddress+':'+port);socket.
         //     if(VAL3lenght > itemCount){VAL3[0]}
         // }
         // console.log(i);
+
         i++;
         if (i > itemCount){
-            i=0;
             time.shift();
             VAL1.shift();
             VAL2.shift();
