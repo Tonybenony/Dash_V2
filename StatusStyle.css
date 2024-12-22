@@ -4,18 +4,20 @@
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    /* border-left: 1px solid black; */
+    /* border-right: 1px solid black; */
+    box-shadow: 0 0 30px black;
     
 }
+html{overflow-y: scroll;overflow-x: hidden;}
 .StatusTable tr:nth-child(even){
-    background-color: #c5f8ff41;
+    background: rgb(102, 141, 149);
 }
 .StatusTable tr:nth-child(odd){
-    background-color: #ffffff41;
+    background: rgb(59, 94, 98);
 }
 .StatusTable tr:nth-child(1){
-    background-color: rgb(37, 37, 37);
+    background: rgb(0, 0, 0);
     color: white;
     font-size: 1.1em;
     font-family: gunplay;
@@ -23,10 +25,11 @@
 .StatusTable tr td:nth-child(1){
     font-family: monospace;
     font-size: 1.5em;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(0, 0, 0);
     color: white;
     border: none;
     text-align: center;
+    border-right: 5px solid rgba(65, 252, 255, 0.6);
 }
 .StatusTable tr th:nth-child(1),
 .StatusTable tr th:nth-child(2){
@@ -36,6 +39,7 @@
 .StatusTable tr td, 
 .StatusTable tr th{
     padding: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.142);
     border-bottom: 1px solid black;
 }
 .StatusTable tr td .status{
@@ -69,9 +73,12 @@
     position: relative;
     border: 1px solid #0c0c0c;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-bottom: 4em;
     border: 1px solid rgba(65, 252, 255, 0.6);
     box-shadow: 0 0 15px rgba(65, 252, 255, 0.6);
     border-radius: 20px;
-    animation: loading 1s linear;opacity: 1;
+    animation: loading 1s linear;
+    opacity: 0.8;
+    z-index: 1;
 }
