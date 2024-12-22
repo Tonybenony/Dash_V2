@@ -63,12 +63,13 @@
         rgba(20, 20, 20, 1) 33%,
         rgba(10, 10, 10, 1) 66%,
         rgba(0, 0, 0, 1) 100%
-        );
+    );
     width: 90%;
     display: block;
     position: relative;
     border: 1px solid #0c0c0c;
     margin: auto;
+    margin-top: 2em;
     border: 1px solid rgba(65, 252, 255, 0.6);
     box-shadow: 0 0 15px rgba(65, 252, 255, 0.6);
     border-radius: 20px;
