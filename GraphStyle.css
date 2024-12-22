@@ -1,0 +1,39 @@
+html{background: var(--BackgroundColor);overflow: hidden;}
+grid{display: grid;grid-template-columns: repeat(3, 1fr);width: 90%;margin: auto;padding: 2em;gap: 2em;}
+.container{background-image: linear-gradient(rgba(30, 30, 30, 1) 0%,rgba(20, 20, 20, 1) 33%,rgba(10, 10, 10, 1) 66%,rgba(0, 0, 0, 1) 100%);width: fit-content;display: block;position: relative;border: 1px solid #0c0c0c;margin: auto;border: 1px solid rgba(65, 252, 255, 0.6);box-shadow: 0 0 15px rgba(65, 252, 255, 0.6);border-radius: 20px;animation: loading 1s linear;opacity: 1;}
+.container graph{color: white;margin: 1em;}
+.container graph canvas{width: var(--GraphWidth);display: block;position: relative;transform: rotate(112deg);}
+.container graph h3,graph value{position: relative;display: block;left: calc(var(--GraphWidth)/2 - var(--GraphLabelWidth)/2);width: var(--GraphLabelWidth);text-align: center;}
+
+.linegraph{width: 90%;grid-column-start: 1;grid-column-end: 4;margin: auto;padding: 1em;}
+#myChart{filter: invert(1);}
+
+graph::before{
+    content: '';
+    width: 130px;
+    aspect-ratio: 1/1;
+    /* background: radial-gradient(
+        rgb(65, 252, 255, 0) 20%,
+        rgba(65, 252, 255, 0.1) 47%,
+        rgba(65, 252, 255, 0) 45%); */
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 35px;
+    border: 1px dashed rgba(65, 252, 255, 0.2);
+    border-radius: 100%;
+    animation: invrotation linear 180s;
+}
+graph::after{
+    content: '';
+    width: 110px;
+    aspect-ratio: 1/1;
+    background: transparent;
+    position: absolute;
+    display: block;
+    top: 16px;
+    left: 45px;
+    border: 1px dashed rgba(65, 252, 255, 0.4);
+    border-radius: 100%;
+    animation: rotation linear 40s;
+}

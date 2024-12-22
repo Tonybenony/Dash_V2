@@ -1,0 +1,8 @@
+[Unit]
+Description=Read /ttyUSB0 to websocket
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /etc/init.d/readUSB0.py
+
+[Install]
+WantedBy=multi-user.target

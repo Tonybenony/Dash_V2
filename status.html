@@ -3,108 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="StatusStyle.css">
+    <link rel="stylesheet" href="FooterStyle.css">
+    <link rel="stylesheet" href="animations.css">
+    <script src="StatusBits.js"></script>
     <title>StatusPage</title>
-    <style>
-        @font-face {
-            font-family: 'gunplay';src: url("assets/gunplay.otf");
-        }
-        :root{
-            --green:rgb(67, 255, 67);
-            --red:rgb(255, 67, 67);
-            --undefined:rgb(255, 242, 67);
-        }
-        *{padding: 0;margin: 0;border: none;outline: none;}
-
-        .StatusTable{
-            width: 90%;
-            background-color: rgb(255, 255, 255);
-            margin: auto;
-            margin-top: 5em;
-            border-left: 1px solid black;
-            border-right: 1px solid black;
-            
-        }
-        .StatusTable tr:nth-child(even){
-            background-color: #c5f8ff;
-        }
-        .StatusTable tr:nth-child(odd){
-            background-color: #ffffff;
-        }
-        .StatusTable tr:nth-child(1){
-            background-color: rgb(64, 64, 64);
-            color: white;
-            font-size: 1.2em;
-            font-family: gunplay;
-        }
-        .StatusTable tr td:nth-child(1){
-            font-family: monospace;
-            font-size: 2em;
-            background-color: rgb(64, 64, 64);
-            color: white;
-            border: none;
-        }
-        .StatusTable tr th:nth-child(1),
-        .StatusTable tr th:nth-child(2){
-            width: 0;
-            border: none;
-        }
-        .StatusTable tr td, 
-        .StatusTable tr th{
-            padding: 0.5em;
-            border-bottom: 1px solid black;
-        }
-        .StatusTable tr td .status{
-            width: 50px;
-            aspect-ratio: 1/1;
-            background: radial-gradient(
-                var(--undefined) 40%,
-                black 100%
-                );
-            border-radius: 50%;
-            border: 3px solid black;
-            box-shadow: 0 0 5px #333;
-            margin: 1em;
-        }
-        .StatusTable tr td p{
-            margin-left: 25%;
-            font-family: monospace;
-            font-size: 2em;
-            display: inline;
-        }
-    </style>
 </head>
 <body onload="load()">
+    <div class="container">
 <table class="StatusTable" CELLSPACING=0>
     <tr><th>Nr.</th><th>Status</th><th>Beschreibung</th></tr>
-    <tr><td class="status_number"></td><td><div class="status" id=""></div></td><td><p>Item 1</p></td></tr>
-    <tr><td class="status_number"></td><td><div class="status" id=""></div></td><td><p>Item 2</p></td></tr>
-
+    <tr><td class="status_number"></td><td><div class="status" id=""></div></td><td><p class="Label" id="">---</p></td></tr>
+    <tr><td class="status_number"></td><td><div class="status" id=""></div></td><td><p class="Label" id="">---</p></td></tr>
+    <tr><td class="status_number"></td><td><div class="status" id=""></div></td><td><p class="Label" id="">---</p></td></tr>
 </table>
-<script>
-    // General load function
-    function load(){
-        SetStatusBitID();
-        CheckInputs();
-    }
-
-    // Set StatusBit IDs
-    function SetStatusBitID(){ 
-        var StatusBitLenght = document.getElementsByClassName("status").length;
-        for (let i = 0; i < StatusBitLenght; i++) {document.getElementsByClassName("status")[i].id = "bit_"+(i+1);}
-
-        var StatusBitLenght = document.getElementsByClassName("status_number").length;
-        for (let i = 0; i < StatusBitLenght; i++) {document.getElementsByClassName("status_number")[i].innerHTML = (i+1)+".";}
-    }
-
-    function CheckInputs(){
-        var a = 0
-
-        if (a === 1) {document.getElementsByClassName("status")[0].style.background = "radial-gradient(var(--green) 40%,black 100%)";};
-        if (a === 0) {document.getElementsByClassName("status")[0].style.background = "radial-gradient(var(--red) 40%,black 100%)";}
-    }
-        
-    
-
-</script>
+</div>
+<footer>
+    <a href="index.html">Graph</a>
+    <a href="status.html">Status</a>
+</footer>
 </body>
 </html>
