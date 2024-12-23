@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="MotorStyle.css">
+    <link rel="stylesheet" href="FooterStyle.css">
+    <link rel="stylesheet" href="animations.css">
+    <title>MotorPage</title>
+    <style>
+        *{padding: 0;outline: 0px solid red;
+        margin: 0;}
+    footer a:nth-child(3){background: rgba(65, 252, 255, 0.6);}
+    .carousell{
+        display: grid;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: 100% 100% 100% ;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        height: 500px;width: 100%;
+        
+        }
+        .container{border-radius: 0;padding: 0;}
+        .carousell div{scroll-snap-align: center;margin-top: 10px;}
+        .carousell div label{
+            position: relative;
+            top: -45px;
+            padding: 10px;
+            background-color: rgba(51, 51, 51, 0.789);
+            color: white; display: block;text-align: center;font-size: 1em;width: fit-content;margin-right: 16px;margin-left: auto;border-top-left-radius: 10px;}
+        iframe{height: 450px;width: 100%;padding: 0;margin: 0;}
+    </style>
+</head>
+<body onload="load()">
+    <div class="container">
+        <section class="carousell">
+            <div><iframe src="Downloads/om636.pdf" frameborder="0"></iframe><label> Motordatenblatt </label></div>
+            <div><iframe src="Downloads/om636.pdf" frameborder="0"></iframe><label> Datenblatt 2 </label></div>
+            <div><iframe src="Downloads/om636.pdf" frameborder="0"></iframe><label> Datenblatt 3 </label></div>
+        </section>
+        
+        
+    </div>
+    <footer>
+        <a href="index.html">Graph</a>
+        <a href="status.html">Status</a>
+        <a href="motor.html">Motor</a>
+    </footer>
+    <hr>
+    <hr>
+</body>
+</html>
