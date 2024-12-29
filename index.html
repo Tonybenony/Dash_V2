@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="FooterStyle.css">
     <link rel="stylesheet" href="animations.css">
     <script src="Chart.js"></script>
-    <script src="PlotChart.js"></script>
+    <script src="PlotValues.js"></script>
     <title>Dashboard</title>
     <style>footer a:nth-child(1){background: rgba(65, 252, 255, 0.6);}</style>
 </head>
@@ -35,12 +35,31 @@
                 <value>---</value>
             </graph>
         </div>
-        <div class="container linegraph">
-            <canvas height="100px" id="myChart"></canvas>
+        <div class="container">
+            <graph>
+                <canvas id="VAL4"></canvas>
+                <h3 id="VAL4_Label">LABEL4</h3>
+                <value>---</value>
+            </graph>
+        </div>
+        <div class="container">
+            <graph>
+                <canvas id="VAL5"></canvas>
+                <h3 id="VAL5_Label">LABEL5</h3>
+                <value>---</value>
+            </graph>
+        </div>
+        <div class="container">
+            <graph>
+                <canvas id="VAL6"></canvas>
+                <h3 id="VAL6_Label">LABEL6</h3>
+                <value>---</value>
+            </graph>
         </div>
     </grid>
     <footer>
-        <a href="index.html">Graph</a>
+        <a href="index.html">Home</a>
+        <a href="graph.html">Graph</a>
         <a href="status.html">Status</a>
         <a href="motor.html">Motor</a>
     </footer>
@@ -48,6 +67,3 @@
     <hr>
 </body>
 </html>
-<script>
-
-</script>

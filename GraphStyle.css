@@ -22,8 +22,7 @@ grid{display: grid;grid-template-columns: repeat(3, 1fr);width: 90%;margin: auto
 .container graph canvas{width: var(--GraphWidth);display: block;position: relative;transform: rotate(112deg);}
 .container graph h3,graph value{position: relative;display: block;left: calc(var(--GraphWidth)/2 - var(--GraphLabelWidth)/2);width: var(--GraphLabelWidth);text-align: center;}
 
-.linegraph{width: 90%;grid-column-start: 1;grid-column-end: 4;margin: auto;padding: 1em;}
-#myChart{filter: invert(1);}
+.linegraph{width: 70%;margin: auto;padding: 1em;}
 
 graph::before{
     content: '';

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="GraphStyle.css">
+    <link rel="stylesheet" href="FooterStyle.css">
+    <link rel="stylesheet" href="animations.css">
+    <script src="Chart.js"></script>
+    <script src="PlotChart.js"></script>
+    <title>Dashboard</title>
+    <style>
+    footer a:nth-child(2){background: rgba(65, 252, 255, 0.6);}
+    grid{grid-template-columns: repeat(2, 1fr);width: 90%;margin: auto;padding: 2em;gap: 2em;}
+    </style>
+</head>
+<body onload="load()">
+    <grid>
+        <div class="container linegraph">
+            <canvas height="200px" id="myChart"></canvas>
+        </div>
+        <div class="container linegraph">
+            <canvas height="200px" id="myChart2"></canvas>
+        </div>
+        <div class="container linegraph">
+            <canvas height="200px" id="myChart3"></canvas>
+        </div>
+    </grid>
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="graph.html">Graph</a>
+        <a href="status.html">Status</a>
+        <a href="motor.html">Motor</a>
+    </footer>
+    <hr>
+    <hr>
+</body>
+</html>
