@@ -7,61 +7,28 @@
     <link rel="stylesheet" href="GraphStyle.css">
     <link rel="stylesheet" href="FooterStyle.css">
     <link rel="stylesheet" href="animations.css">
-    <script src="Chart.js"></script>
-    <script src="PlotValues.js"></script>
     <title>Dashboard</title>
-    <style>footer a:nth-child(1){background: rgba(65, 252, 255, 0.6);}</style>
+    <style>
+        .Mainframe{
+            display: block;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
 </head>
-<body onload="load()">
-    <grid>
-        <div class="container">
-            <graph>
-                <canvas id="VAL1"></canvas>
-                <h3 id="VAL1_Label">LABEL1</h3>
-                <value>---</value>
-            </graph>
-        </div>
-        <div class="container">
-            <graph>
-                <canvas id="VAL2"></canvas>
-                <h3 id="VAL2_Label">LABEL2</h3>
-                <value>---</value>
-            </graph>
-        </div>
-        <div class="container">
-            <graph>
-                <canvas id="VAL3"></canvas>
-                <h3 id="VAL3_Label">LABEL3</h3>
-                <value>---</value>
-            </graph>
-        </div>
-        <div class="container">
-            <graph>
-                <canvas id="VAL4"></canvas>
-                <h3 id="VAL4_Label">LABEL4</h3>
-                <value>---</value>
-            </graph>
-        </div>
-        <div class="container">
-            <graph>
-                <canvas id="VAL5"></canvas>
-                <h3 id="VAL5_Label">LABEL5</h3>
-                <value>---</value>
-            </graph>
-        </div>
-        <div class="container">
-            <graph>
-                <canvas id="VAL6"></canvas>
-                <h3 id="VAL6_Label">LABEL6</h3>
-                <value>---</value>
-            </graph>
-        </div>
-    </grid>
+<body>
+    <iframe class="Mainframe" name="Main" src="index.html" frameborder="0"></iframe>
     <footer>
-        <a href="index.html">Home</a>
-        <a href="graph.html">Graph</a>
-        <a href="status.html">Status</a>
-        <a href="motor.html">Motor</a>
+        <a target="Main" href="index.html">Home</a>
+        <a target="Main" href="gauge.html">Gauge</a>
+        <a target="Main" href="status.html">Status</a>
+        <a target="Main" href="motor.html">Motor</a>
     </footer>
     <hr>
     <hr>

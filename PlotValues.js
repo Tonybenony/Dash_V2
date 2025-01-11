@@ -2,8 +2,7 @@
 ipaddress="192.168.178.37"
 port="9990"
 
-i=0;
-watingTime= 30;
+watingTime= 100;
 
 var VAL1 = [];VAL1_Name="Eng Batt";VAL1_unit="V";
 var VAL2 = [];VAL2_Name="Aux Batt";VAL2_unit="V";
@@ -20,9 +19,10 @@ function show(){const socket = new WebSocket('ws://'+ipaddress+':'+port);socket.
     function (event) {
         val = event.data;valSort = val.replace(/(\r\n|\n|\r)/gm,"");let numArray = valSort.split(";");
         input_lenght = numArray.length
-        if (input_lenght < 20){
-            console.debug("kleiner 20.\n Eingaben und wird verworfen")
+        if (input_lenght < 6){
+            console.debug(input_lenght + "|" + "kleiner 20.\n Eingaben und wird verworfen")
         }else{
+            console.debug(input_lenght)
             count = numArray.length
 
             item1 =  numArray[0];
@@ -64,10 +64,8 @@ function show(){const socket = new WebSocket('ws://'+ipaddress+':'+port);socket.
             drawCanvas("VAL4" ,vVAL4,10,"#cb3a3a");
             drawCanvas("VAL5" ,vVAL5,10,"#cb3a3a");
             drawCanvas("VAL6" ,vVAL6,10,"#cb3a3a");
-
-            i++;
         }
-    });
+    });setTimeout(() => show(), watingTime);
     
 function drawCanvas(ELEMENT,VALUE,MAXVALUE, COLOR){
     var endAngle = VALUE/MAXVALUE * Math.PI;
@@ -86,4 +84,4 @@ function drawCanvas(ELEMENT,VALUE,MAXVALUE, COLOR){
     context.stroke();
 }
 
-};setTimeout(() => load(), watingTime);
+}

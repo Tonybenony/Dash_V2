@@ -5,7 +5,7 @@ port="9990"
 const Tables = ["StatusBit1","StatusBit2","StatusBit4","StatusBit5","StatusBit6","StatusBit7","StatusBit8","StatusBit9","StatusBit10","StatusBit11"];
 const Names = ["Batt", "Vol","test","StatusBit5","StatusBit6","StatusBit7","StatusBit8","StatusBit9","StatusBit10","StatusBit11"];
 
-watingTime= 3000;
+watingTime= 100;
 
 function load(){
     ScreenWidth();

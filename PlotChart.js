@@ -4,7 +4,7 @@ port="9990"
 
 i=0;
 itemCount = 20;
-watingTime= 1000;
+watingTime= 30;
 
 var time = [];
 var VAL1 = [];
