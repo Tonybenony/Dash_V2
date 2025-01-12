@@ -20,4 +20,5 @@ html{background: var(--BackgroundColor);overflow: hidden;}
 .StatusTable tr td p a:hover, a:hover{background: rgba(65, 252, 255, 1);}
 @font-face {
     font-family: 'gunplay';src: url("assets/gunplay.otf");
+    font-family: 'HarlowSolid';src: url("assets/HarlowSolid.ttf");
 }

@@ -27,6 +27,14 @@ hr{
     overflow: hidden;
     z-index: 0;
 }
+hr:nth-child(4){
+    top: 0px;
+    left: 250px;
+    border-style: dashed;
+    border-width: 5px;
+    animation: rotation linear 120s infinite;
+
+}
 hr:nth-child(3){
     top: 0px;
     left: 250px;
